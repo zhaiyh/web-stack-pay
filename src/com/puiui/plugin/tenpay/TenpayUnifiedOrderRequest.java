@@ -5,49 +5,51 @@ package com.puiui.plugin.tenpay;
  */
 public class TenpayUnifiedOrderRequest {
     /** 应用ID */
+    @Required
     private String appId;
     /** 商户号 */
+    @Required
     @XmlMap("mch_id")
     private String partnerId;
     /** 设备号 */
-    @Required(false)
     private String deviceInfo;
     /** 随机字符串 */
+    @Required
     private String nonceStr;
     /** 签名 */
+    @SignIgnore
     private String sign;
     /** 商品描述 */
+    @Required
     private String body;
     /** 商品详情 */
-    @Required(false)
     private String detail;
     /** 附加数据 */
-    @Required(false)
     private String attach;
     /** 商户订单号 */
+    @Required
     private String outTradeNo;
     /** 货币类型 */
-    @Required(false)
     private String feeType;
     /** 总金额 */
+    @Required
     private String totalFee;
     /** 终端IP */
+    @Required
     private String spbillCreateIp;
     /** 交易起始时间 */
-    @Required(false)
     private String timeStart;
     /** 交易结束时间 */
-    @Required(false)
     private String timeExpire;
     /** 商品标记 */
-    @Required(false)
     private String goodsTag;
     /** 通知地址 */
+    @Required
     private String notifyUrl;
     /** 交易类型 */
+    @Required
     private String tradeType;
     /** 指定支付方式 */
-    @Required(false)
     private String limitPay;
 
     public TenpayUnifiedOrderRequest() {

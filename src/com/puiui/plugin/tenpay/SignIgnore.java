@@ -6,9 +6,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 此注解,表明改字段是必须的,不能为null或者空字符串
+ * 此注解,表明是签名的时候应该忽略的字段
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Required {
+public @interface SignIgnore {
 }
